@@ -1,0 +1,18 @@
+// Import partials with @use
+
+@use "colors";
+@use "typography";
+@use "sizes";
+@use "mixins";
+
+// Example usage
+body {
+  @include mixins.font(typography.$font-akzidenz, typography.$font-size-base);
+  background-color: colors.$white;
+  color: colors.$red-cross-gray;
+}
+
+h1 {
+  @include mixins.font(typography.$font-akzidenz, map-get(typography.$heading-sizes, h1), typography.$font-weight-bold);
+  @include mixins.brand-color("red-cross-red");
+}

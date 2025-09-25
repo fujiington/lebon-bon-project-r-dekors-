@@ -1,0 +1,15 @@
+// Minimum sizes from guidelines
+
+// Print
+$print-min-size: 0.275in; // ~7 mm
+
+// Digital
+$digital-min-size: 26px; // logo minimum
+$digital-min-button: 6px; // small icons
+
+// Export as a map for consistency
+$minimum-sizes: (
+  "print": $print-min-size,
+  "digital-logo": $digital-min-size,
+  "digital-button": $digital-min-button
+);
