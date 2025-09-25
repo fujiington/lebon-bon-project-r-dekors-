@@ -1,18 +1,54 @@
-// Import partials with @use
+// =============================================================================
+// MAIN.SCSS - Entry Point
+// American Red Cross Website SCSS Structure
+// =============================================================================
 
-@use "colors";
-@use "typography";
-@use "sizes";
-@use "mixins";
+// Abstract Layer - No CSS output
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+@use 'abstracts/mixins';
 
-// Example usage
-body {
-  @include mixins.font(typography.$font-akzidenz, typography.$font-size-base);
-  background-color: colors.$white;
-  color: colors.$red-cross-gray;
-}
+// Vendors - Third party CSS
+@use 'vendors/normalize';
 
-h1 {
-  @include mixins.font(typography.$font-akzidenz, map-get(typography.$heading-sizes, h1), typography.$font-weight-bold);
-  @include mixins.brand-color("red-cross-red");
-}
+// Base - Basic styles
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/base';
+
+// Layout - Major layout components
+@use 'layout/header';
+@use 'layout/navigation';
+@use 'layout/sidebar';
+@use 'layout/footer';
+@use 'layout/grid';
+
+// Components - Reusable components
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/logos';
+@use 'components/hero-sections';
+@use 'components/testimonials';
+@use 'components/call-to-action';
+@use 'components/media';
+@use 'components/navigation-elements';
+
+// Pages - Specific page styles
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/donate';
+@use 'pages/volunteer';
+@use 'pages/news';
+
+// Themes - Color variations
+@use 'themes/default';
+
+// Utilities - Helper classes
+@use 'utilities/spacing';
+@use 'utilities/text';
+@use 'utilities/display';
+@use 'utilities/color';
+
+// Print styles
+@use 'utilities/print';
